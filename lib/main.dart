@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "app demo",
       home: Scaffold(
         appBar: AppBar(
@@ -15,8 +16,43 @@ class MyApp extends StatelessWidget {
           title: Text("App Demo"),
           centerTitle: true,
         ),
-        body: Icon(Icons.home, color: Color.fromARGB(255, 5, 44, 5), size: 100.0),
-        
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.red,
+              child: Center(
+                child: Text("Hello World",style: TextStyle(fontSize: 20),),
+              ),
+            ),
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.blue,
+              child: Center(
+                child: Text("Hello World",style: TextStyle(fontSize: 20),),
+              ),
+            ),
+            Container(
+              height: 100,
+              width: double.infinity,
+              color: Colors.red,
+              child: Center(
+                child: Text("Hello World",style: TextStyle(fontSize: 20),),
+              ),
+            ),
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.green,
+              child: Center(
+                child: Text("Hello World",style: TextStyle(fontSize: 20),),
+              ),
+            ),
+          ],  
+        ) 
         
       ),
     );
